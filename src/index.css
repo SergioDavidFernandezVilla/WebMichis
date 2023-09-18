@@ -1,0 +1,919 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+  background-color: #fbfbfb
+}
+
+.Navbar_menu_Header {
+  background-color: rgb(251, 253, 255);
+  height: 76px;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  height: 100%;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.navbar_ul {
+  
+  height: 50px;
+  width: 50px;
+}
+
+.navbar_li {
+  list-style-type: none;
+  
+}
+
+.navbar_image {
+  width: 100%;
+}
+
+.logo_titulo {
+  font-weight: 800;
+  padding-left: 5px;
+}
+
+.navbar_segundo{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  height: 100%;
+  width: 100%;
+  padding-right: 40px;
+}
+
+.navbar_ul_segundo{
+  display: flex;
+  gap: 14px;
+  height: 110px;
+  width: 110px;
+  flex-wrap: nowrap;
+ 
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar_li_segundo{
+  list-style-type:none;;
+}
+
+.navbar_a_segundo{
+  width: 100%;
+}
+
+.navbar_image_segundo {
+  width: 100%;
+}
+
+
+.subNavbar {
+  height: 70px;
+  background-color: rgb(30, 29, 29);
+  min-width: 100vh;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.subNavbar_ul {
+  z-index: 20;
+  padding-left: 5px;
+  justify-content: start;
+  align-items: center;
+  display: flex;
+  
+  height: 100%;
+  width: 100%;
+}
+
+.subNavbar_ul .subNavbar_li {
+  padding: 5px;
+  display: inline-block;
+}
+
+
+.subNavbar_a {
+  font-weight: 400;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  position: relative;
+}
+.subNavbar_a:hover {
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration:underline 3px;
+  transition: all ease-in-out 0.1s;
+  font-weight: 700;
+}
+
+.dropdown_ul {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgb(34, 33, 33);
+  min-height: fit-content;
+  max-height: 400px;
+  min-width: 320px;
+  max-width: 360px; 
+  border: 1px solid #ccc;
+  list-style: none;
+  text-align:center;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.subNavbar_li:hover .dropdown_ul {
+  display: block;
+  line-height: 30px;
+}
+.menu_Li{
+  position: relative;
+}
+
+.dropdown_li:hover {
+  background-color: rgb(61, 64, 61);
+}
+
+.dropdown_a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  width: 100%;
+  height: 100%;
+}
+
+.dropdown_a:hover {
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: underline 3px;
+  transition: all ease-in-out 0.1s;
+  font-weight: 700;
+}
+
+.loading-indicator{
+  font-size: 1.4rem;
+  color:#fff;
+}
+
+/*AQUI VA EL PATH*/
+
+
+.container_carousel {
+  width: 100%;
+  height: 90vh;
+  
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(37, 37, 37);
+  overflow: hidden;
+}
+
+.carousel {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.container_img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.figure_img_cat {
+  position: relative;
+}
+
+.img_cat {
+  display: none;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.img_cat.active {
+  display: block;
+}
+
+.imgcat_text_container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background: rgb(20, 20, 20);
+  background: linear-gradient(
+    90deg,
+    rgba(20, 20, 20, 0.8) 0%,
+    rgba(33, 33, 33, 0.8687850140056023) 100%
+  );
+
+  opacity: 0; /* Oculta el texto por defecto */
+  transition: opacity 0.3s ease; /* Agrega una transición suave */
+}
+
+.container_text_img {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  place-content: center;
+  text-align: center;
+  max-width: 1200px;
+  min-width: 240px;
+  margin: 140px;
+  height: 500px;
+  text-align: center;
+}
+
+/* Muestra el texto cuando la imagen es hover */
+.figure_img_cat:hover .imgcat_text_container {
+  opacity: 1;
+  cursor: text;
+}
+
+.titulo_text_imgcat {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.paragh_text_imgcat {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.button_carrousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  color: #ffffff;
+  margin: 20px;
+  font-size: 5rem;
+  width: 60px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.container_album {
+  display: grid;
+  margin: 0 auto;
+  height: 300px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.Grid_colum {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px; /* Espacio entre las imágenes */
+  overflow: hidden;
+  height: auto;
+  margin-top: 54px;
+  min-width: 1600px;
+  white-space: nowrap; /* Evita que las imágenes se rompan en varias líneas */
+}
+
+.Titulo_album{
+  padding-left: 40px;
+}
+
+/* Nueva clase para la animación de desplazamiento */
+.horizontal-scroll {
+  transition: all ease 0.3s;
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    
+    transform: translateX(0);
+  }
+  100% {
+
+    transform: translateX(-100%);
+  }
+}
+
+
+.container_CardImg {
+  width: 100%; /* Ajusta el ancho de las imágenes según tus necesidades */
+ ; /* Ajusta la altura de las imágenes según tus necesidades */
+}
+
+.figure_CardImg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Clase para las tarjetas inactivas */
+.CardImg {
+  border-radius: 6px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  opacity: 0.2; /* Aplicar opacidad a las tarjetas inactivas */
+  transition: opacity 0.3s ease; /* Agregar una transición suave para la opacidad */
+
+}
+
+
+.CardImg.active {
+  opacity: 1; /
+}
+
+.container_Text_album {
+  display: grid;
+  text-align: start;
+  max-width: 400px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.container_Arrows_album {
+  display: flex;
+  padding-right: 80px;
+  justify-content: end;
+  align-items: center;
+}
+
+.Arrows_album_Cats {
+  font-size: 2.1rem;
+  color: black;
+}
+
+.container_footer{
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  width: 100%;
+  height: 60px;
+  background-color: rgb(42, 42, 42);
+  margin-top: 100px;
+}
+
+.paragh_footer{
+  color:#fff;
+  font-weight: 200;
+}
+
+.span_footer_paragh{
+  font-weight: 600;
+}
+.span_footer_paragh:hover{
+  text-decoration: underline 3px rgb(233, 233, 233);
+}
+
+.container_page_raza{
+  margin: 0 auto;
+  max-width: 1600px;
+  min-width: 1200px;
+}
+
+.container_Razas{
+  display: flex;
+  flex-direction: column;
+  gap:50px;
+  padding-top: 10px;
+  margin: 0 auto;
+  width: auto;
+  height: 100%;
+}
+
+.container_CardRaza{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  width: 100%;
+  min-height: 500px;
+}
+
+.container_img_raza{
+  max-width: 600px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.img_razaCat{
+  border-radius: 8px;
+  width: 100%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.article_razas{
+  margin-top: 10px;
+}
+
+.titulo_raza{
+  font-size: 2.6rem;
+  font-weight: 600;
+}
+
+.span_titulo_raza{
+  font-weight: 900;
+  color:rgb(9, 90, 231);
+  font-size: 2.4rem;
+}
+
+.span_paragh_descripcion{
+  font-size: 1.6rem;
+  color:black;
+  font-weight: 600;
+}
+
+.paragh_raza{
+  margin-top: 10px;
+  font-size: 1.3rem;
+}
+
+.span_paragh_personalidad{
+  font-size: 1.6rem;
+  font-weight: 500;
+  color:black;
+  font-weight: 600;
+}
+
+.paragh_raza_personalidad{
+  font-size: 1.3rem;
+  margin-top: 10px;
+}
+
+.span_raza_caracteristicas{
+  font-size: 1.6rem;
+  font-weight: 500;
+  color:black;
+  font-weight: 600;
+}
+
+.paragh_raza_caracteristicas{
+  margin-top: 10px;
+  font-size: 1.3rem;
+}
+
+.span_raza_paisOrigen{
+  font-size: 1.6rem;
+  font-weight: 500;
+  color:black;
+  font-weight: 600;
+}
+
+.paragh_raza_paisOrigen{
+  margin-top: 10px;
+  font-size: 1.3rem;
+}
+
+.section_container_Razas_Galeria{
+  background-color: #fbfbfb;
+  display: flex;
+  
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 50vh;
+}
+
+.article_razas_galeria{
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.paragh_razas_galeria{
+  font-size: 1.2rem;
+}
+
+.titulo_galeria{
+  font-size: 1.8rem;
+  font-style: italic;
+}
+
+/*TELEFONO*/
+@media (max-width: 768px) {
+  .Navbar_menu_Header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Cambiar a alineación a la izquierda */
+    width: auto;
+    height: auto;
+    gap: 15px;
+  } 
+
+  .dropdown_ul{
+    min-height: 240px;
+    max-height: 400px;
+    min-width: 240px;
+    max-width: 400px; 
+  }
+
+  .logo_titulo {
+    padding-left: 20px;
+  }
+
+  .subNavbar {
+    height: auto;
+    width: 100%;
+  }
+
+  .subNavbar_ul {
+    justify-content: flex-start; /* Cambiar a alineación a la izquierda */
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 70px;
+    padding: 14px;
+  }
+
+  .container_carousel{
+    display: flex;
+    width: 100%;
+    
+    height: 500px;
+  }
+
+  .carousel {
+    width: 100%; /* Cambiar a un ancho del 100% */
+    height: 100%; /* Hacer que la altura sea automática */
+  }
+
+  .container_img {
+    display: flex;
+    width: auto;
+    height: 100%;
+  }
+
+  /* Cambiar el ancho de .figure_img_cat a 100% para adaptarse al carrusel */
+  .figure_img_cat {
+    width: auto;
+    height: auto;
+  }
+
+  .figure_img_cat.active{
+    height: 100%;
+    width: 100%;
+  }
+
+  .img_cat{
+    
+    height: 100%;
+    width: auto;
+  }
+
+  .img_cat.active{
+
+    width: auto;
+    height: 100%;
+  }
+
+  .imgcat_text_container {
+    display: none;
+  }
+
+  .container_Text_album{
+    max-width: 400px;
+  }
+
+  .button_carrousel{
+    margin: 20px;
+  }
+
+  .container_footer{
+    max-width: 720px;
+    min-width: 360px;
+    height: 120px;
+    text-align: center;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container_Razas{
+    display: flex;
+    max-width: 720px;
+    min-width: 340px;
+    font-size: 1.2rem;
+    margin: 0 auto;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+  }
+
+  .container_page_raza {
+    margin: 0 auto;
+    max-width: 720px;
+    min-width: 360px;
+    font-size: 1.2rem;
+    
+  }
+
+
+  .container_CardRaza{
+    display: flex;
+    flex-direction: column-reverse;
+    width: auto;
+    height: 100%;
+    margin: 0 auto;
+
+  }
+
+ 
+  .container_img_raza{
+
+    height: auto;
+    padding: 20px
+  }
+
+  .section_container_Razas_Galeria{
+    margin-top: 40px;
+  }
+
+  .section_razas{
+    font-size: 1.2rem;
+    width: 100%;
+    height: 100%;
+  }
+  .article_razas{
+    width: auto;
+    height: 100%;
+    margin:20px;
+    font-size: 1.1rem;
+  }
+  .titulo_raza{
+    font-size: 1.4rem;
+  }
+  .span_titulo_raza{
+    font-size: 1.6rem;
+  }
+  .span_paragh_descripcion{
+    font-size: 1.4rem;
+  }
+  .span_paragh_personalidad{
+    font-size: 1.4rem;
+  }
+  .span_raza_caracteristicas{
+    font-size: 1.4rem;
+  }
+  .span_raza_paisOrigen{
+    font-size: 1.4rem;
+  }
+  .span_footer_paragh:hover{
+    text-decoration: underline 3px rgb(233, 233, 233);
+  }
+}
+
+/*Para tablets iPad*/
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) and (device-aspect-ratio: 3/4) {
+
+  .img_cat{
+    min-width: 768px;
+  }
+
+  .container_Razas{
+    display: flex;
+  }
+  .container_footer{
+    max-width: 1024px;
+    min-width: 700px;
+    height: 120px;
+    text-align: center;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+
+  .container_page_raza {
+    margin: 0 auto;
+    max-width: 1024px;
+    min-width: 700px;
+    font-size: 1.2rem;
+    
+  }
+
+
+  .container_CardRaza{
+    display: flex;
+    flex-direction: column-reverse;
+    width: auto;
+    height: 100%;
+    margin: 0 auto;
+
+  }
+  .titulo_raza{
+    font-size: 1.4rem;
+  }
+  .span_titulo_raza{
+    font-size: 1.6rem;
+  }
+  .span_paragh_descripcion{
+    font-size: 1.4rem;
+  }
+  .span_paragh_personalidad{
+    font-size: 1.4rem;
+  }
+  .span_raza_caracteristicas{
+    font-size: 1.4rem;
+  }
+  .span_raza_paisOrigen{
+    font-size: 1.4rem;
+  }
+  .span_footer_paragh:hover{
+    text-decoration: underline 3px rgb(233, 233, 233);
+  }
+}
+
+/* Para tablets Android*/
+@media screen and (min-width: 600px) and (max-width: 1024px) and (orientation: landscape) {
+        .img_cat{
+          min-width: 768px;
+        }
+      
+        .container_Razas{
+          display: flex;
+        }
+        .container_footer{
+          max-width: 1024px;
+          min-width: 700px;
+          height: 120px;
+          text-align: center;
+          padding: 0px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      
+        .container_Razas{
+          display: flex;
+          max-width: 1024px;
+          min-width: 700px;
+          font-size: 1.2rem;
+          margin: 0 auto;
+         justify-content: center;
+         align-items: center;
+         text-align: center;
+        }
+      
+        .container_page_raza {
+          margin: 0 auto;
+          max-width: 1024px;
+          min-width: 700px;
+          font-size: 1.2rem;
+          
+        }
+      
+      
+        .container_CardRaza{
+          display: flex;
+          flex-direction: column-reverse;
+          width: auto;
+          height: 100%;
+          margin: 0 auto;
+      
+        }
+        .titulo_raza{
+          font-size: 1.4rem;
+        }
+        .span_titulo_raza{
+          font-size: 1.6rem;
+        }
+        .span_paragh_descripcion{
+          font-size: 1.4rem;
+        }
+        .span_paragh_personalidad{
+          font-size: 1.4rem;
+        }
+        .span_raza_caracteristicas{
+          font-size: 1.4rem;
+        }
+        .span_raza_paisOrigen{
+          font-size: 1.4rem;
+        }
+        .span_footer_paragh:hover{
+          text-decoration: underline 3px rgb(233, 233, 233);
+        }
+}
+
+@media only screen
+  and (min-device-width: 768px) /* Ancho mínimo de 768px para iPad */
+  and (max-device-width: 1024px) /* Ancho máximo de 1024px para iPad Pro */
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape), /* Orientación horizontal */
+  only screen
+  and (min-device-width: 834px) /* Ancho mínimo de 834px para iPad Pro */
+  and (max-device-width: 1112px) /* Ancho máximo de 1112px para iPad Pro */
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) /* Orientación vertical */ {
+  /* Estilos específicos para iPads Pro aquí */
+  .img_cat{
+    max-width: 1366px;
+    min-width: 1024px;
+  }
+
+  .container_Razas{
+    display: flex;
+  }
+  .container_footer{
+    max-width: 1024px;
+    min-width: 700px;
+    height: 120px;
+    text-align: center;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container_Razas{
+    display: flex;
+    max-width: 1366px;
+    min-width: 1024px;
+    font-size: 1.2rem;
+    margin: 0 auto;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+  }
+
+  .container_page_raza {
+    margin: 0 auto;
+    max-width: 1366px;
+    min-width: 1024px;
+    font-size: 1.2rem;
+    
+  }
+
+
+  .container_CardRaza{
+    display: flex;
+    flex-direction: column-reverse;
+    width: auto;
+    height: 100%;
+    margin: 0 auto;
+
+  }
+  .section_razas{
+    max-width: 1366px;
+    min-width: 1024px;
+  }
+
+  .article_razas{
+    margin-top: 20px;
+  }
+
+
+  .titulo_raza{
+    font-size: 1.4rem;
+  }
+  .span_titulo_raza{
+    font-size: 1.6rem;
+  }
+  .span_paragh_descripcion{
+    font-size: 1.4rem;
+  }
+  .span_paragh_personalidad{
+    font-size: 1.4rem;
+  }
+  .span_raza_caracteristicas{
+    font-size: 1.4rem;
+  }
+  .span_raza_paisOrigen{
+    font-size: 1.4rem;
+  }
+  .span_footer_paragh:hover{
+    text-decoration: underline 3px rgb(233, 233, 233);
+  }
+
+}
+
