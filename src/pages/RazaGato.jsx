@@ -85,8 +85,6 @@ export default function RazaGato() {
               {/*PONER UN TAL VEZ UNA GALERIA XD*/}
             </section>
           </div>
-
-          <Footer></Footer>
         </div>
       </>
     );

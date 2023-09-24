@@ -707,8 +707,9 @@ body {
   }
 }
 
-/* Estilos para Galaxy A12 en orientación vertical */
-@media only screen and (max-width: 720px) and (max-height: 1600px)  {
+
+
+@media (max-width: 414px)  {
   /* Aquí colocarías tus estilos específicos para dispositivos móviles */
   /* Por ejemplo, ajustar el diseño y el tamaño de fuente */
   body {
@@ -736,9 +737,8 @@ body {
   }
 
   .subNavbar {
-    display: flex;
-    width: auto;
-    height: 100%;
+    height: auto;
+    width: 425px;
   }
 
   .subNavbar_ul {
@@ -752,7 +752,7 @@ body {
 
   .container_carousel{
     display: flex;
-    width: 100%;
+    width: 425px;
     
     height: 500px;
   }
@@ -809,18 +809,16 @@ body {
   }
 
   .container_footer{
-    
-    text-align: center;
-    padding: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-top: 120px;
+    width: 425px;
+    height: 100px;
   }
 
   .footer{
-    max-width: 720px;
-    min-width: 360px;
-    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 
   .container_Razas{
@@ -898,6 +896,7 @@ body {
 }
 
 
+
 /*Para tablets iPad*/
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) and (device-aspect-ratio: 3/4) {
 
@@ -962,13 +961,7 @@ body {
 }
 
 
-@media only screen and (max-width: 400px) {
-  .subNavbar{
-    min-width: 280px;
-    max-width: 620px;
-  }
 
-}
 
 
 /* Estilos para dispositivos Apple (iOS) */
@@ -1074,7 +1067,7 @@ body {
   }
 
   .container_footer{
-    width: 420px;
+    width: 425px;
  
     text-align: center;
     padding: 0px;
