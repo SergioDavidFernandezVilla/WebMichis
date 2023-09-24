@@ -707,6 +707,197 @@ body {
   }
 }
 
+/* Estilos para Galaxy A12 en orientación vertical */
+@media only screen and (max-width: 720px) and (max-height: 1600px)  {
+  /* Aquí colocarías tus estilos específicos para dispositivos móviles */
+  /* Por ejemplo, ajustar el diseño y el tamaño de fuente */
+  body {
+    font-size: 16px;
+  }
+
+  .Navbar_menu_Header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Cambiar a alineación a la izquierda */
+    width: auto;
+    height: auto;
+    gap: 15px;
+  } 
+
+  .dropdown_ul{
+    min-height: 240px;
+    max-height: 400px;
+    min-width: 240px;
+    max-width: 400px; 
+  }
+
+  .logo_titulo {
+    padding-left: 20px;
+  }
+
+  .subNavbar {
+    display: flex;
+    width: auto;
+    height: 100%;
+  }
+
+  .subNavbar_ul {
+    justify-content: flex-start; /* Cambiar a alineación a la izquierda */
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 70px;
+    padding: 14px;
+  }
+
+  .container_carousel{
+    display: flex;
+    width: 100%;
+    
+    height: 500px;
+  }
+
+  .carousel {
+    width: 100%; /* Cambiar a un ancho del 100% */
+    height: 100%; /* Hacer que la altura sea automática */
+  }
+
+  .container_img {
+    display: flex;
+    width: auto;
+    height: 100%;
+  }
+
+  /* Cambiar el ancho de .figure_img_cat a 100% para adaptarse al carrusel */
+  .figure_img_cat {
+    width: auto;
+    height: auto;
+  }
+
+  .figure_img_cat.active{
+    height: 100%;
+    width: 100%;
+  }
+
+  .img_cat{
+    
+    height: 100%;
+    width: auto;
+  }
+
+  .img_cat.active{
+
+    width: auto;
+    height: 100%;
+  }
+
+  .imgcat_text_container {
+    display: none;
+  }
+
+  .container_Text_album{
+    max-width: 400px;
+  }
+
+  .button_carrousel{
+    margin: 20px;
+  }
+
+  .Grid_colum{
+    min-width: 240px;
+    max-width: 500px;
+  }
+
+  .container_footer{
+    
+    text-align: center;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer{
+    max-width: 720px;
+    min-width: 360px;
+    height: 120px;
+  }
+
+  .container_Razas{
+    display: flex;
+    max-width: 720px;
+    min-width: 340px;
+    font-size: 1.2rem;
+    margin: 0 auto;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+  }
+
+  .container_page_raza {
+    margin: 0 auto;
+    max-width: 720px;
+    min-width: 360px;
+    font-size: 1.2rem;
+    
+  }
+
+
+  .container_CardRaza{
+    display: flex;
+    flex-direction: column-reverse;
+    width: auto;
+    height: 100%;
+    margin: 0 auto;
+
+  }
+
+ 
+  .container_img_raza{
+
+    height: auto;
+    padding: 20px
+  }
+
+  .section_container_Razas_Galeria{
+    margin-top: 40px;
+  }
+
+  .section_razas{
+    font-size: 1.2rem;
+    width: 100%;
+    height: 100%;
+  }
+  .article_razas{
+    width: auto;
+    height: 100%;
+    margin:20px;
+    font-size: 1.1rem;
+  }
+  .titulo_raza{
+    font-size: 1.4rem;
+  }
+  .span_titulo_raza{
+    font-size: 1.6rem;
+  }
+  .span_paragh_descripcion{
+    font-size: 1.4rem;
+  }
+  .span_paragh_personalidad{
+    font-size: 1.4rem;
+  }
+  .span_raza_caracteristicas{
+    font-size: 1.4rem;
+  }
+  .span_raza_paisOrigen{
+    font-size: 1.4rem;
+  }
+  .span_footer_paragh:hover{
+    text-decoration: underline 3px rgb(233, 233, 233);
+  }
+}
+
+
 /*Para tablets iPad*/
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) and (device-aspect-ratio: 3/4) {
 
@@ -781,7 +972,7 @@ body {
 
 
 /* Estilos para dispositivos Apple (iOS) */
-@media only screen and (min-device-width: 320px) and (max-device-width: 767px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 769px) and (-webkit-min-device-pixel-ratio: 2) {
  
 /* Aquí colocarías tus estilos específicos para dispositivos móviles */
   /* Por ejemplo, ajustar el diseño y el tamaño de fuente */
@@ -811,7 +1002,7 @@ body {
 
   .subNavbar {
     display: flex;
-    width: 420px;
+    width: 425px;
     height: 100%;
   }
 
@@ -826,7 +1017,7 @@ body {
 
   .container_carousel{
     display: flex;
-    width: 420px;
+    width: 425px;
     
     height: 500px;
   }
@@ -1037,96 +1228,3 @@ body {
           text-decoration: underline 3px rgb(233, 233, 233);
         }
 }
-
-@media only screen
-  and (min-device-width: 768px) /* Ancho mínimo de 768px para iPad */
-  and (max-device-width: 1024px) /* Ancho máximo de 1024px para iPad Pro */
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape), /* Orientación horizontal */
-  only screen
-  and (min-device-width: 834px) /* Ancho mínimo de 834px para iPad Pro */
-  and (max-device-width: 1112px) /* Ancho máximo de 1112px para iPad Pro */
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) /* Orientación vertical */ {
-  /* Estilos específicos para iPads Pro aquí */
-  .img_cat{
-    max-width: 1366px;
-    min-width: 1024px;
-  }
-
-  .container_Razas{
-    display: flex;
-  }
-  .container_footer{
-    max-width: 1024px;
-    min-width: 700px;
-    height: 120px;
-    text-align: center;
-    padding: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .container_Razas{
-    display: flex;
-    max-width: 1366px;
-    min-width: 1024px;
-    font-size: 1.2rem;
-    margin: 0 auto;
-   justify-content: center;
-   align-items: center;
-   text-align: center;
-  }
-
-  .container_page_raza {
-    margin: 0 auto;
-    max-width: 1366px;
-    min-width: 1024px;
-    font-size: 1.2rem;
-    
-  }
-
-
-  .container_CardRaza{
-    display: flex;
-    flex-direction: column-reverse;
-    width: auto;
-    height: 100%;
-    margin: 0 auto;
-
-  }
-  .section_razas{
-    max-width: 1366px;
-    min-width: 1024px;
-  }
-
-  .article_razas{
-    margin-top: 20px;
-  }
-
-
-  .titulo_raza{
-    font-size: 1.4rem;
-  }
-  .span_titulo_raza{
-    font-size: 1.6rem;
-  }
-  .span_paragh_descripcion{
-    font-size: 1.4rem;
-  }
-  .span_paragh_personalidad{
-    font-size: 1.4rem;
-  }
-  .span_raza_caracteristicas{
-    font-size: 1.4rem;
-  }
-  .span_raza_paisOrigen{
-    font-size: 1.4rem;
-  }
-  .span_footer_paragh:hover{
-    text-decoration: underline 3px rgb(233, 233, 233);
-  }
-
-}
-
